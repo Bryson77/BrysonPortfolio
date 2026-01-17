@@ -1,109 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Bryson Mabilo</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryson Mabilo | Developer & Cloud Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="" type="image/png">
+    <script src="index.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="grid-lines"></div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="logo">
-            <a href="#">Bryson Mabilo</a>
+            <a href="#hero">
+                <span class="logo-bracket">&lt;</span>
+                Bryson Mabilo
+                <span class="logo-bracket">/&gt;</span>
+            </a>
         </div>
         <ul class="links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#hero" class="nav-link active">Home</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <div class="mobile-toggle" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <h1>Hi, I'm Bryson Mabilo</h1>
-        <p>Welcome to my portfolio page!</p>
-        <a href="#projects" class="btn">View My Work</a>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="greeting">Hello, I'm</span>
+                <h1 class="hero-title">
+                    <span class="name-text">Bryson Mabilo</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-prefix">I build</span>
+                    <span class="typed-text"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Cloud computing specialist, AI/ML engineer, and full-stack developer crafting digital solutions that transform ideas into reality.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll Down</span>
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <h2>My Skills</h2>
-        <div class="skillcards">
-            <div class="card">
-                <h3>AWS</h3>
-                <p>AWS Cloud Practitioner Certified</p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">My Skills</h2>
+                <p class="section-description">
+                    Years of learning, experimentation, and real-world application across multiple domains
+                </p>
             </div>
-            <div class="card">
-                <h3>AI/ML Engineer</h3>
-                <p>Building intelligent systems with machine learning</p>
-            </div>
-            <div class="card">
-                <h3>Web & App Development</h3>
-                <p>Creating responsive websites and mobile apps</p>
+            <div class="skillcards">
+                <div class="card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h3>AWS Cloud</h3>
+                    <div class="skill-badge">Certified Practitioner</div>
+                    <p>Experienced in deploying scalable applications, managing cloud infrastructure, and optimizing performance.</p>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> Serverless Architectures</li>
+                        <li><i class="fas fa-check"></i> Automated CI/CD Pipelines</li>
+                        <li><i class="fas fa-check"></i> Secure Cloud Environments</li>
+                    </ul>
+                </div>
+                <div class="card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML Engineer</h3>
+                    <div class="skill-badge">Python · TensorFlow · PyTorch</div>
+                    <p>Building intelligent systems focused on predictive analytics, NLP, and computer vision.</p>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> Recommendation Systems</li>
+                        <li><i class="fas fa-check"></i> Sentiment Analysis</li>
+                        <li><i class="fas fa-check"></i> Image Classification</li>
+                    </ul>
+                </div>
+                <div class="card" data-tilt>
+                    <div class="card-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Full-Stack Development</h3>
+                    <div class="skill-badge">React · Flutter · JavaScript</div>
+                    <p>Designing responsive websites and mobile apps with intuitive user interfaces.</p>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-check"></i> E-commerce Platforms</li>
+                        <li><i class="fas fa-check"></i> Productivity Tools</li>
+                        <li><i class="fas fa-check"></i> Interactive Dashboards</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-box">
-            <div class="project">
-                <h3>Growtech</h3>
-                <p>A smart agriculture platform</p>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Solving problems and creating meaningful digital experiences
+                </p>
             </div>
-            <div class="project">
-                <h3>Music Player</h3>
-                <p>Custom-built music streaming app</p>
-            </div>
-            <div class="project">
-                <h3>Productivity App</h3>
-                <p>Helping users stay organized and efficient</p>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Growtech</h3>
+                    <p>Smart agriculture platform helping farmers monitor soil health, crop growth, and weather conditions using IoT sensors and AI analytics.</p>
+                    <div class="project-tech">
+                        <span>IoT</span>
+                        <span>AI Analytics</span>
+                        <span>Real-time Data</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-chart-line"></i> Predictive Yield Models</div>
+                        <div class="feature"><i class="fas fa-tint"></i> Automated Irrigation</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Music Player</h3>
+                    <p>Custom-built music streaming app with offline playback, playlist management, and AI-powered song recommendations.</p>
+                    <div class="project-tech">
+                        <span>React Native</span>
+                        <span>Cloud Storage</span>
+                        <span>AI Recommendations</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-download"></i> Offline Playback</div>
+                        <div class="feature"><i class="fas fa-sync"></i> Cross-Device Sync</div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3>Productivity App</h3>
+                    <p>Comprehensive task management app with tracking, reminders, and collaborative features to boost team productivity.</p>
+                    <div class="project-tech">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="project-features">
+                        <div class="feature"><i class="fas fa-gamepad"></i> Gamification</div>
+                        <div class="feature"><i class="fas fa-chart-bar"></i> Productivity Analytics</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate developer with expertise in cloud computing, AI/ML, and full-stack development. 
-            My goal is to build impactful solutions that make life easier and smarter.
-        </p>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>Testimonials</h2>
-        <div class="testimonial-box">
-            <div class="testimonial">
-                <p>"Bryson is a highly skilled engineer who delivers quality work on time!"</p>
-                <span>- Client A</span>
-            </div>
-            <div class="testimonial">
-                <p>"His creativity and technical expertise make him a valuable team member."</p>
-                <span>- Client B</span>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <span class="section-tag">Get To Know Me</span>
+                        <h2 class="section-title">About Me</h2>
+                    </div>
+                    <p>
+                        I'm a passionate developer with expertise in <strong>cloud computing</strong>, <strong>AI/ML</strong>, and <strong>full-stack development</strong>. My journey started with curiosity about how technology can transform lives, and it has grown into a career focused on building impactful solutions.
+                    </p>
+                    <p>
+                        Over the years, I've worked on diverse projects ranging from smart agriculture systems to mobile productivity apps. I thrive in environments where creativity meets technical problem-solving, and I enjoy collaborating with teams to bring ideas to life.
+                    </p>
+                    <p>
+                        Outside of coding, I'm constantly learning new tools and frameworks, exploring emerging technologies, and contributing to open-source projects. My vision is to continue growing as an engineer while making meaningful contributions to the tech community.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="3">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-buttons">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="window-title">developer.js</span>
+                        </div>
+                        <div class="window-content">
+                            <code>
+<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Bryson Mabilo"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Full-Stack Developer"</span>,
+  <span class="code-property">location</span>: <span class="code-string">"South Africa"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"AWS"</span>,
+    <span class="code-string">"AI/ML"</span>,
+    <span class="code-string">"React"</span>,
+    <span class="code-string">"Flutter"</span>,
+    <span class="code-string">"Python"</span>
+  ],
+  <span class="code-property">passion</span>: <span class="code-string">"Building the future"</span>
+};
+                            </code>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <div class="socials">
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Twitter</a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">
+                    Interested in working together or just want to say hi? Reach out through any platform below.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:bryson@example.com">bryson@example.com</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Location</h4>
+                        <p>Johannesburg, South Africa</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Phone</h4>
+                        <a href="tel:+27123456789">+27 12 345 6789</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link" data-platform="github">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="#" class="social-link" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Bryson Mabilo | All Rights Reserved</p>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Bryson Mabilo. All Rights Reserved.</p>
+                <p>Designed & Built with <i class="fas fa-heart"></i> by Bryson</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
+
