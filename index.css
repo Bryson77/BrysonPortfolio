@@ -1,15 +1,17 @@
-/* ==================== ROOT VARIABLES ==================== */
+/* ==================== ROOT VARIABLES - LIGHTER THEME ==================== */
 :root {
     --primary: #0066ff;
     --primary-dark: #0052cc;
     --secondary: #00a8ff;
-    --dark: #0a0a0a;
-    --darker: #000000;
+    /* Lighter background colors */
+    --dark: #1a1a2e;
+    --darker: #16213e;
     --light: #ffffff;
-    --gray: #1a1a1a;
-    --gray-light: #2a2a2a;
-    --border: #333333;
-    --text-secondary: #b0b0b0;
+    --gray: #0f3460;
+    --gray-light: #1a4568;
+    --border: #2a4d6e;
+    --text-secondary: #c5d1e0;
+    --accent-glow: rgba(0, 102, 255, 0.15);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -48,6 +50,7 @@ body {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
 .grid-lines {
@@ -55,8 +58,8 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(0, 102, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 102, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(rgba(0, 102, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 102, 255, 0.08) 1px, transparent 1px);
     background-size: 50px 50px;
     animation: gridMove 20s linear infinite;
 }
@@ -71,7 +74,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
+    background: rgba(26, 26, 46, 0.95);
     backdrop-filter: blur(20px);
     padding: 1.2rem 5%;
     display: flex;
@@ -80,11 +83,13 @@ body {
     z-index: 1000;
     border-bottom: 1px solid var(--border);
     transition: var(--transition);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled {
     padding: 0.8rem 5%;
-    box-shadow: 0 10px 40px rgba(0, 102, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 102, 255, 0.2);
+    background: rgba(22, 33, 62, 0.98);
 }
 
 .logo a {
@@ -296,13 +301,13 @@ body {
 .btn-primary {
     background: var(--primary);
     color: var(--light);
-    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4);
 }
 
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 102, 255, 0.5);
 }
 
 .btn-secondary {
@@ -380,13 +385,14 @@ body {
 }
 
 .card {
-    background: var(--gray);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.6), rgba(26, 69, 104, 0.4));
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 2.5rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .card::before {
@@ -404,7 +410,8 @@ body {
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
-    box-shadow: 0 20px 50px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 20px 50px rgba(0, 102, 255, 0.3);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.8), rgba(26, 69, 104, 0.6));
 }
 
 .card:hover::before {
@@ -423,6 +430,7 @@ body {
     color: var(--light);
     margin-bottom: 1.5rem;
     transition: var(--transition);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.3);
 }
 
 .card:hover .card-icon {
@@ -437,13 +445,14 @@ body {
 
 .skill-badge {
     display: inline-block;
-    background: rgba(0, 102, 255, 0.1);
+    background: rgba(0, 102, 255, 0.2);
     color: var(--primary);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    border: 1px solid rgba(0, 102, 255, 0.3);
 }
 
 .card p {
@@ -483,13 +492,14 @@ body {
 }
 
 .project-card {
-    background: var(--gray);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.5), rgba(26, 69, 104, 0.3));
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 2rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .project-card::before {
@@ -499,7 +509,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.15), transparent);
     transition: left 0.5s ease;
 }
 
@@ -510,7 +520,8 @@ body {
 .project-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
-    box-shadow: 0 20px 50px rgba(0, 102, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 102, 255, 0.25);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.7), rgba(26, 69, 104, 0.5));
 }
 
 .project-header {
@@ -530,6 +541,7 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     color: var(--light);
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.3);
 }
 
 .project-links {
@@ -540,7 +552,7 @@ body {
 .project-link {
     width: 40px;
     height: 40px;
-    background: var(--gray-light);
+    background: rgba(26, 69, 104, 0.6);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -548,12 +560,14 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     transition: var(--transition);
+    border: 1px solid var(--border);
 }
 
 .project-link:hover {
     background: var(--primary);
     color: var(--light);
     transform: translateY(-3px);
+    border-color: var(--primary);
 }
 
 .project-card h3 {
@@ -576,12 +590,13 @@ body {
 }
 
 .project-tech span {
-    background: rgba(0, 102, 255, 0.1);
+    background: rgba(0, 102, 255, 0.2);
     color: var(--primary);
     padding: 0.3rem 0.8rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    border: 1px solid rgba(0, 102, 255, 0.3);
 }
 
 .project-features {
@@ -636,6 +651,17 @@ body {
 
 .stat-item {
     text-align: center;
+    padding: 1.5rem;
+    background: rgba(15, 52, 96, 0.3);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    background: rgba(15, 52, 96, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.2);
 }
 
 .stat-number {
@@ -653,15 +679,16 @@ body {
 }
 
 .code-window {
-    background: var(--gray);
+    background: rgba(15, 52, 96, 0.6);
     border: 1px solid var(--border);
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 
 .window-header {
-    background: var(--gray-light);
+    background: rgba(26, 69, 104, 0.8);
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -719,17 +746,19 @@ body {
 }
 
 .info-card {
-    background: var(--gray);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.5), rgba(26, 69, 104, 0.3));
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 2rem;
     text-align: center;
     transition: var(--transition);
+    backdrop-filter: blur(10px);
 }
 
 .info-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.2);
 }
 
 .info-icon {
@@ -743,6 +772,7 @@ body {
     font-size: 1.5rem;
     color: var(--light);
     margin: 0 auto 1rem;
+    box-shadow: 0 6px 16px rgba(0, 102, 255, 0.3);
 }
 
 .info-card h4 {
@@ -771,7 +801,7 @@ body {
 .social-link {
     width: 120px;
     height: 120px;
-    background: var(--gray);
+    background: linear-gradient(135deg, rgba(15, 52, 96, 0.5), rgba(26, 69, 104, 0.3));
     border: 1px solid var(--border);
     border-radius: 16px;
     display: flex;
@@ -784,6 +814,7 @@ body {
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .social-link::before {
@@ -799,7 +830,7 @@ body {
 }
 
 .social-link:hover::before {
-    opacity: 0.1;
+    opacity: 0.15;
 }
 
 .social-link i {
@@ -820,7 +851,7 @@ body {
     transform: translateY(-10px);
     border-color: var(--primary);
     color: var(--light);
-    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.2);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.3);
 }
 
 .social-link:hover i {
@@ -861,7 +892,8 @@ body {
         right: -100%;
         width: 300px;
         height: calc(100vh - 80px);
-        background: var(--gray);
+        background: rgba(15, 52, 96, 0.98);
+        backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 2rem;
         gap: 1rem;

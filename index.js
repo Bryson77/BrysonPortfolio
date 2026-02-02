@@ -27,11 +27,11 @@ navLinkItems.forEach(link => {
     });
 });
 
-// Active nav link on scroll
+// Active nav link on scroll - IMPROVED VERSION
 const sections = document.querySelectorAll('section');
 
 function updateActiveNavLink() {
-    const scrollPos = window.scrollY + 100;
+    const scrollPos = window.scrollY + 150; // Adjusted offset for better detection
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -47,9 +47,22 @@ function updateActiveNavLink() {
             });
         }
     });
+    
+    // Handle top of page - ensure Home is active
+    if (window.scrollY < 100) {
+        navLinkItems.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#hero') {
+                link.classList.add('active');
+            }
+        });
+    }
 }
 
 window.addEventListener('scroll', updateActiveNavLink);
+
+// Call on page load to set initial state
+updateActiveNavLink();
 
 // ==================== TYPING EFFECT ====================
 const typedTextSpan = document.querySelector('.typed-text');
@@ -193,6 +206,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==================== PARALLAX EFFECT ====================
+// Parallax effect disabled - causes unwanted movement of hero section
+/*
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.hero-content');
@@ -202,6 +217,7 @@ window.addEventListener('scroll', () => {
         el.style.transform = `translateY(${scrolled * speed}px)`;
     });
 });
+*/
 
 // ==================== PROJECT CARD ANIMATIONS ====================
 const projectCards = document.querySelectorAll('.project-card');
