@@ -3,6 +3,39 @@ const navbar = document.getElementById('navbar');
 const mobileToggle = document.getElementById('mobile-toggle');
 const navLinks = document.querySelector('.links');
 const navLinkItems = document.querySelectorAll('.nav-link');
+const themeToggle = document.getElementById('theme-toggle');
+
+// Dark mode toggle
+function setTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+}
+
+function getTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        return savedTheme;
+    }
+    // Check system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Initialize theme
+setTheme(getTheme());
+
+// Theme toggle button
+themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+});
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+    }
+});
 
 // Navbar scroll effect
 window.addEventListener('scroll', () => {

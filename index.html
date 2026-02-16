@@ -29,6 +29,15 @@
             <li><a href="#about" class="nav-link">About</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+            <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="4" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M10 2V3M10 17V18M18 10H17M3 10H2M15.657 4.343L14.95 5.05M5.05 14.95L4.343 15.657M15.657 15.657L14.95 14.95M5.05 5.05L4.343 4.343" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 11.328A8 8 0 119.328 2 6.5 6.5 0 0018 11.328z" fill="currentColor"/>
+            </svg>
+        </button>
         <div class="mobile-toggle" id="mobile-toggle">
             <span></span>
             <span></span>
@@ -40,6 +49,11 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <div class="hero-text">
+                <div class="profile-picture">
+                    <div class="profile-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
                 <span class="greeting">Hello, I'm</span>
                 <h1 class="hero-title">
                     <span class="name-text">Bryson Mabilo</span>
@@ -50,7 +64,7 @@
                     <span class="cursor">|</span>
                 </div>
                 <p class="hero-description">
-                    AWS Cloud Practitioner and aspiring AI/ML engineer & full-stack developer crafting digital solutions that transform ideas into reality.
+                    Certified AWS Cloud Practitioner and aspiring Machine Learning Developer currently building toward a career in Full-Stack Software Development, with a focus on data-driven applications and intelligent web platforms.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
@@ -62,12 +76,6 @@
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <span>Scroll Down</span>
             </div>
         </div>
     </section>
@@ -87,39 +95,39 @@
                     <div class="card-icon">
                         <i class="fab fa-aws"></i>
                     </div>
-                    <h3>AWS Cloud</h3>
-                    <div class="skill-badge">Certified Practitioner</div>
-                    <p>Experienced in managing cloud infrastructure, and optimizing performance.</p>
+                    <h3>AWS Cloud Fundamentals</h3>
+                    <div class="skill-badge">Certified Cloud Practitioner</div>
+                    <p>AWS Certified Cloud Practitioner with knowledge of cloud architecture basics and application deployment concepts.</p>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> Serverless Architectures</li>
-                        <li><i class="fas fa-check"></i> Automated CI/CD Pipelines</li>
-                        <li><i class="fas fa-check"></i> Secure Cloud Environments</li>
+                        <li><i class="fas fa-check"></i> Cloud Architecture Basics</li>
+                        <li><i class="fas fa-check"></i> Application Deployment Concepts</li>
+                        <li><i class="fas fa-check"></i> AWS Service Fundamentals</li>
                     </ul>
                 </div>
                 <div class="card" data-tilt>
                     <div class="card-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>Aspiring AI/ML Engineer</h3>
-                    <div class="skill-badge">Python · TensorFlow · PyTorch</div>
-                    <p>Building intelligent systems focused on predictive analytics, NLP, and computer vision.</p>
+                    <h3>Machine Learning Fundamentals</h3>
+                    <div class="skill-badge">Python · Learning · Data-Driven</div>
+                    <p>Building foundational knowledge in machine learning, focusing on intelligent system integration and data-driven applications.</p>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> Recommendation Systems</li>
-                        <li><i class="fas fa-check"></i> Sentiment Analysis</li>
-                        <li><i class="fas fa-check"></i> Image Classification</li>
+                        <li><i class="fas fa-check"></i> Algorithmic Thinking</li>
+                        <li><i class="fas fa-check"></i> Data Analysis Concepts</li>
+                        <li><i class="fas fa-check"></i> Intelligent System Integration</li>
                     </ul>
                 </div>
                 <div class="card" data-tilt>
                     <div class="card-icon">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3>Aspiring Full-Stack Developer</h3>
-                    <div class="skill-badge">React · Flutter · JavaScript</div>
-                    <p>Designing responsive websites and mobile apps with intuitive user interfaces.</p>
+                    <h3>Full-Stack Web Development</h3>
+                    <div class="skill-badge">Java · Python · JavaScript · HTML/CSS</div>
+                    <p>Developing proficiency in full-stack development through practical projects, focusing on backend logic and frontend systems.</p>
                     <ul class="skill-list">
-                        <li><i class="fas fa-check"></i> E-commerce Platforms</li>
-                        <li><i class="fas fa-check"></i> Productivity Tools</li>
-                        <li><i class="fas fa-check"></i> Interactive Dashboards</li>
+                        <li><i class="fas fa-check"></i> Web Application Design</li>
+                        <li><i class="fas fa-check"></i> Backend Logic Development</li>
+                        <li><i class="fas fa-check"></i> Frontend Interface Building</li>
                     </ul>
                 </div>
             </div>
@@ -147,60 +155,38 @@
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3>Growtech</h3>
-                    <p>Smart agriculture platform helping farmers monitor soil health, crop growth, and weather conditions using AI and provided plant information. My website also provides farmers with a detailed yield and profit calculator based on data from GrainSA.</p>
+                    <h3>Growtech Collective</h3>
+                    <p>Agricultural information and yield support web application aimed at making crop intelligence more accessible through software tools. Features an informational crop database, yield calculator for production estimation, and AI-powered chatbot for planting queries.</p>
                     <div class="project-tech">
-                        <span>IoT</span>
-                        <span>AI Analytics</span>
-                        <span>Real-time Data</span>
+                        <span>Web Application</span>
+                        <span>AI Chatbot</span>
+                        <span>Database Design</span>
                     </div>
                     <div class="project-features">
-                        <div class="feature"><i class="fas fa-chart-line"></i> Predictive Yield Models</div>
-                        <div class="feature"><i class="fas fa-tint"></i> Automated Irrigation</div>
+                        <div class="feature"><i class="fas fa-database"></i> Crop Information Database</div>
+                        <div class="feature"><i class="fas fa-calculator"></i> Yield Calculator Tool</div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
                         <div class="project-icon">
-                            <i class="fas fa-music"></i>
+                            <i class="fas fa-palette"></i>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link"><i class="fab fa-github"></i></a>
                             <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
-                    <h3>Music Player</h3>
-                    <p>Custom-built music streaming app with offline playback, playlist management, and AI-powered song recommendations.</p>
+                    <h3>Creative & Digital Design</h3>
+                    <p>Visual content creation for digital marketing and social media, including promotional materials, product marketing assets, and short-form video content.</p>
                     <div class="project-tech">
-                        <span>React Native</span>
-                        <span>Cloud Storage</span>
-                        <span>AI Recommendations</span>
+                        <span>Canva</span>
+                        <span>CapCut</span>
+                        <span>Social Media</span>
                     </div>
                     <div class="project-features">
-                        <div class="feature"><i class="fas fa-download"></i> Offline Playback</div>
-                        <div class="feature"><i class="fas fa-sync"></i> Cross-Device Sync</div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">
-                            <i class="fas fa-tasks"></i>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3>Productivity App</h3>
-                    <p>Comprehensive task management app with tracking, reminders, and collaborative features to boost team productivity.</p>
-                    <div class="project-tech">
-                        <span>Flutter</span>
-                        <span>Firebase</span>
-                        <span>Analytics</span>
-                    </div>
-                    <div class="project-features">
-                        <div class="feature"><i class="fas fa-gamepad"></i> Gamification</div>
-                        <div class="feature"><i class="fas fa-chart-bar"></i> Productivity Analytics</div>
+                        <div class="feature"><i class="fas fa-image"></i> Promotional Material Design</div>
+                        <div class="feature"><i class="fas fa-video"></i> Short-Form Video Editing</div>
                     </div>
                 </div>
             </div>
@@ -217,13 +203,13 @@
                         <h2 class="section-title">About Me</h2>
                     </div>
                     <p>
-                        I'm a passionate developer with expertise in <strong>cloud computing</strong>, <strong>AI/ML</strong>, and <strong>full-stack development</strong>. My journey started with curiosity about how technology can transform lives, and it has grown into a career focused on building impactful solutions.
+                        I'm actively building toward a career in <strong>Full-Stack Software Development</strong> with a particular interest in <strong>Machine Learning</strong> and <strong>data-driven applications</strong>. My journey started with curiosity about how technology can solve real-world problems, and over the past 2 years, I've been developing practical skills through hands-on projects.
                     </p>
                     <p>
-                        Over the years, I've worked on diverse projects ranging from smart agriculture systems to mobile productivity apps. I thrive in environments where creativity meets technical problem-solving, and I enjoy collaborating with teams to bring ideas to life.
+                        I'm currently developing proficiency in <strong>Java</strong>, <strong>Python</strong>, and <strong>JavaScript</strong>, along with <strong>HTML5</strong> and <strong>CSS3</strong> for frontend development. As an <strong>AWS Certified Cloud Practitioner</strong>, I have foundational knowledge of cloud architecture and deployment concepts. I'm also building skills in <strong>algorithmic thinking</strong>, <strong>computational problem-solving</strong>, and <strong>intelligent system integration</strong>.
                     </p>
                     <p>
-                        Outside of coding, I'm constantly learning new tools and frameworks, exploring emerging technologies, and contributing to open-source projects. My vision is to continue growing as an engineer while making meaningful contributions to the tech community.
+                        Beyond technical development, I create <strong>visual content</strong> and <strong>promotional materials</strong> using tools like <strong>Canva</strong> and <strong>CapCut</strong>, applying design thinking to digital marketing and social media. My vision is to continue growing as a developer while contributing meaningful solutions through software and creative problem-solving.
                     </p>
                     <div class="stats-grid">
                         <div class="stat-item">
@@ -254,16 +240,18 @@
                             <code>
 <span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
   <span class="code-property">name</span>: <span class="code-string">"Bryson Mabilo"</span>,
-  <span class="code-property">role</span>: <span class="code-string">"Aspiring Full-Stack Developer"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Aspiring Software Developer"</span>,
   <span class="code-property">location</span>: <span class="code-string">"South Africa"</span>,
   <span class="code-property">skills</span>: [
     <span class="code-string">"Java"</span>,
     <span class="code-string">"Python"</span>,
-    <span class="code-string">"HTML/CSS/JS"</span>,
+    <span class="code-string">"JavaScript"</span>,
+    <span class="code-string">"HTML/CSS"</span>,
     <span class="code-string">"AWS"</span>,
     <span class="code-string">"GitHub"</span>
   ],
-  <span class="code-property">passion</span>: <span class="code-string">"Building the future"</span>
+  <span class="code-property">focus</span>: <span class="code-string">"Full-Stack & ML Development"</span>,
+  <span class="code-property">passion</span>: <span class="code-string">"Building practical solutions"</span>
 };
                             </code>
                         </div>
@@ -290,7 +278,7 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h4>Email</h4>
-                        <a href="mailto:bryson@example.com">bryson@example.com</a>
+                        <a href="/cdn-cgi/l/email-protection#4b2939323824250b2e332a263b272e65282426"><span class="__cf_email__" data-cfemail="6507171c160a0b25001d04081509004b060a08">[email&#160;protected]</span></a>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">
